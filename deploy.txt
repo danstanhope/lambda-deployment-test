@@ -1,0 +1,8 @@
+sam package \
+  --template-file template.yml \
+  --output-template-file package.yml \
+  --s3-bucket danstanhope
+sam deploy \
+  --template-file package.yml \
+  --stack-name sam-hello-world-1 \
+  --capabilities CAPABILITY_IAM
