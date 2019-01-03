@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template-file template.yml --kms-key-id kms-key-id --s3-bucket bucket-name 
+      - aws cloudformation package --template-file template.yml --s3-bucket MyLambdaPipeline/MyApp 
                                    --output-template-file outputTemplate.yml
 artifacts:
   type: zip
