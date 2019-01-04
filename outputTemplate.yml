@@ -3,7 +3,7 @@ Description: Outputs the time
 Resources:
   TimeFunction:
     Properties:
-      CodeUri: s3://codepipeline-us-east-1-667917735804/848254260614219f1319e98b73f43fbf
+      CodeUri: s3://codepipeline-us-east-1-342964710516/7bfbc4f4b258b93fcb95a0df0aa84d2f
       Events:
         MyTimeApi:
           Properties:
