@@ -3,7 +3,7 @@ Description: Outputs the time
 Resources:
   TimeFunction:
     Properties:
-      CodeUri: s3://codepipeline-us-east-1-983952263258/b35e6fce515c083e80f33f528c4b080c
+      CodeUri: s3://codepipeline-us-east-1-983952263258/b3941c53761d4f8b11c96650f05d33f1
       Events:
         MyTimeApi:
           Properties:
@@ -11,6 +11,6 @@ Resources:
             Path: /TimeResource
           Type: Api
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31
