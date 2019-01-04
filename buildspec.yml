@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template-file template.yml --s3-bucket codepipeline-us-east-1-276747162735
+      - aws cloudformation package --template-file template.yml --kms-key-id d9cef297-06e9-4c87-b82c-e66598891d20 --s3-bucket codepipeline-us-east-1-276747162735
                                    --output-template-file outputTemplate.yml 
 artifacts:
   type: zip
