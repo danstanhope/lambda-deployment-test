@@ -14,3 +14,9 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
+    TimeGateway:
+        Type: AWS::Serverless::Api
+        Properties:
+          StageName: Stage
+          Variables:
+            LambdaFunctionName: !Ref TimeFunction            
