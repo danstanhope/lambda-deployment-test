@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 
 app.get('/time', function(req, res) {
     res.status(200).json({
-        "time": moment().tz("CST").format("dddd, MMMM Do YYYY, hh:mm:ss zz")
+        "the current time is: ": moment().tz("CST").format("dddd, MMMM Do YYYY, hh:mm:ss zz")
     });
 })
 
