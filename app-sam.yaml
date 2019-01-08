@@ -18,6 +18,9 @@ Resources:
       CodeUri: app/
       Runtime: nodejs8.10
       Policies: AWSLambdaBasicExecutionRole
+      Environment:
+        STAGING_DYNAMODB_ARN : staging-arn
+        PRODUCTION_DYNAMODB_ARN : staging-arn
       Events:
         ApiEventSource:
           Type: Api
