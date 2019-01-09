@@ -28,7 +28,7 @@ Resources:
           Properties:
             Path: /{proxy+}
             Method: ANY
-      awsKmsKeyArn: 'arn:aws:kms:us-east-1:285893673875:key/d9cef297-06e9-4c87-b82c-e66598891d20'            
+      KMSKeyArn: 'arn:aws:kms:us-east-1:285893673875:key/d9cef297-06e9-4c87-b82c-e66598891d20'            
 
 Outputs:
   ApiUrl:
