@@ -20,8 +20,8 @@ Resources:
       Policies: AWSLambdaBasicExecutionRole
       Environment:
         Variables:
-          STAGING : '{"DYNAMODB_ARN": ${Stage}}'
-          PRODUCTION : '{"DYNAMODB_ARN": ${Stage}}'
+          STAGING : ${Stage}
+          PRODUCTION : ${Stage}
       Events:
         ApiEventSource:
           Type: Api
