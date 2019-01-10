@@ -15,23 +15,9 @@ app.use(function(req, res, next) {
 
 app.get('/time', function(req, res) {
     res.status(200).json({
-        "the current time is": moment().tz("CST").format("dddd, MMMM Do YYYY, hh:mm:ss zz")
+        "Environment Variables ": process.env
     });
 })
-
-app.get('/time/:tz', function(req, res) {
-    var timezone = req.params.tz
-    var time = moment().format()
-    try {
-        time = moment().tz(timezone).format("dddd, MMMM Do YYYY, hh:mm:ss z")
-    } catch (ex) {
-        console.log(ex)
-    }
-    res.status(200).json({
-        "time": time
-    });
-})
-
 /*app.listen(3000, function() {
     console.log("App started")
 })*/
