@@ -217,7 +217,7 @@ Resources:
                         StackName: !Sub '${ServiceName}-Stack-Staging'
                         ChangeSetName: !Sub '${ServiceName}-ChangeSet-Staging'
                         TemplatePath: BuiltZip::app-output_sam.yaml
-                        TemplateConfiguration: BuiltZip::staging-config.json
+                        #TemplateConfiguration: !Sub "TemplateSource::${TestStackConfig}"
                         Capabilities: CAPABILITY_IAM
                         ParameterOverrides: '{ "Stage": "staging" }'
                       InputArtifacts:
