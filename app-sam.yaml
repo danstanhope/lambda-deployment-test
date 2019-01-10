@@ -11,8 +11,8 @@ Parameters:
     Description: Stage that can be added to resource names
 
 Conditions:
-  isStaging: !Not [ !Equals [!Ref Stage, '']]
-  isProduction: !Not [ !Equals [!Ref Stage, '']]
+  isStaging: !Not [ !Equals [!Ref Stage, 'staging']]
+  isProduction: !Not [ !Equals [!Ref Stage, 'prod']]
 
 Resources:
   TimeFunction:
@@ -24,8 +24,8 @@ Resources:
       Policies: AWSLambdaBasicExecutionRole
       Environment:
         Variables:
-          STAGING : ${isStaging}
-          PRODUCTION : ${isProduction}
+          STAGING :  !Ref isStaging
+          PRODUCTION : !Ref isProduction
       Events:
         ApiEventSource:
           Type: Api
