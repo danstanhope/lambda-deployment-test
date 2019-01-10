@@ -11,8 +11,8 @@ Parameters:
     Description: Stage that can be added to resource names
 
 Mappings:
-  DomainResourceMapping:
-    DUBCrossAccountIAMRole:
+  EnvironmentResourceMapping:
+    DynamoDbARN:
       staging: "arn:aws:dynamodb:us-east-1:285893673875:table/STAGING_TABLE/stream/2019-01-10T15:54:31.721"
       prod: "arn:aws:dynamodb:us-east-1:285893673875:table/PROD_TABLE/stream/2019-01-10T15:55:22.598"  
 
@@ -26,10 +26,10 @@ Resources:
       Policies: AWSLambdaBasicExecutionRole
       Environment:
           Variables:
-            DUB_CROSS_ACCOUNT_IAM_ROLE:
+            DYNAMODB_ARN:
               Fn::FindInMap:
-              - DomainResourceMapping
-              - DUBCrossAccountIAMRole
+              - EnvironmentResourceMapping
+              - DynamoDbARN
               - {Ref: Stage}
       Events:
         ApiEventSource:
