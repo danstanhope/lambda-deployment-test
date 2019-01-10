@@ -32,7 +32,7 @@ Resources:
               - DynamoDbARN
               - {Ref: Stage}
       Events:
-        MyTrigger:
+        TestStreamTrigger:
           Type: DynamoDb
           Properties:
             Stream: arn:aws:dynamodb:us-east-1:285893673875:table/STAGING_TABLE/stream/2019-01-10T15:54:31.721
