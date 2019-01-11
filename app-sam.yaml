@@ -37,7 +37,7 @@ Resources:
   DynamoStreamFunctionEventSourceMapping:
     Type: AWS::Lambda::EventSourceMapping
     Properties:
-      BatchSize: 10
+      BatchSize: 1
       Enabled: true
       StartingPosition: TRIM_HORIZON
       EventSourceArn: arn:aws:dynamodb:us-east-1:285893673875:table/STAGING_TABLE/stream/2019-01-10T15:54:31.721
